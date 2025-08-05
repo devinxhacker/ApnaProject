@@ -9,7 +9,7 @@ def parse_config_files(config_directory):
     for device_name in os.listdir(config_directory):
         device_path = os.path.join(config_directory, device_name)
         if os.path.isdir(device_path):
-            config_file = os.path.join(device_path, 'config.txt')
+            config_file = os.path.join(device_path, 'config.dump')
             if os.path.exists(config_file):
                 with open(config_file, 'r') as f:
                     content = f.read()
